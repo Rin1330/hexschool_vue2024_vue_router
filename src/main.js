@@ -1,5 +1,7 @@
 import './assets/all.scss'
 
+// eslint-disable-next-line no-unused-vars
+import * as bootstrap from 'bootstrap'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import axios from 'axios'
