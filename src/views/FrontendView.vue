@@ -1,5 +1,3 @@
-<script></script>
-
 <template>
   <header>
     <nav class="navbar navbar-expand-lg">
@@ -45,5 +43,7 @@
     <RouterView />
   </div>
 </template>
+
+<script></script>
 
 <style></style>

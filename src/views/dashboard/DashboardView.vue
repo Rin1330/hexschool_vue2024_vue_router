@@ -38,31 +38,29 @@
 <script>
 const { VITE_URL } = import.meta.env
 
-  export default {
-    methods: {
-      checkAdmin() {
-        this.$http.post(`${VITE_URL}/api/user/check`)
-          .then(() => {
-            // console.log(res.data);
-          })
-          .catch(() => {
-            // console.log(err);
-            setTimeout(() => {
-              this.$router.push('/login')
-            }, 0);
-          })
-      },
-    },
-    mounted() {
-        const token = document.cookie.replace(
-          /(?:(?:^|.*;\s*)hexVueToken\s*=\s*([^;]*).*$)|^.*$/,
-          "$1",
-        );
-        // console.log(token);
-        this.$http.defaults.headers.common['Authorization'] = token;
-        this.checkAdmin()
-      },
+export default {
+  methods: {
+    checkAdmin() {
+      this.$http
+        .post(`${VITE_URL}/api/user/check`)
+        .then(() => {
+          // console.log(res.data);
+        })
+        .catch(() => {
+          // console.log(err);
+          setTimeout(() => {
+            this.$router.push('/login')
+          }, 0)
+        })
+    }
+  },
+  mounted() {
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexVueToken\s*=\s*([^;]*).*$)|^.*$/, '$1')
+    // console.log(token);
+    this.$http.defaults.headers.common['Authorization'] = token
+    this.checkAdmin()
   }
+}
 </script>
 
 <style scoped lang="scss"></style>

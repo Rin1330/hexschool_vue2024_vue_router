@@ -93,7 +93,7 @@ export default {
       this.user.username = ''
       this.user.password = ''
     }
-  },
+  }
 }
 </script>
 
