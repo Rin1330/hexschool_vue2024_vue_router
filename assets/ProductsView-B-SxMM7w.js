@@ -1,0 +1,1 @@
+import{_ as t,c as e,o}from"./index-BSW2IaRT.js";const c={data(){},methods:{getProduct(){}},mounted(){this.getProduct()}};function r(s,a,n,d,u,p){return o(),e("h2",null,"Products page")}const f=t(c,[["render",r]]);export{f as default};
